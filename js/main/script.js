@@ -4,7 +4,7 @@
 // When the page loaded ..
 $(window).on("load", function () {
     //Fade out spinner first in 2s after page loaded ..
-    $(".loading .run").fadeOut(2000,
+    $(".loading .bee").fadeOut(2000,
         function () {
             //Reset body to overflow (auto) again after loading screen fade out ..
             $("body").css("overflow", "auto");
@@ -77,23 +77,3 @@ $('.navbar-nav>li>a').on('click', function () {
     $('.navbar-collapse').removeClass('show');
 });
 ////////////////////End Script for Navbar Active Tab//////////////////////
-
-//////// Start add animation to job ////////
-// add job title animation when page loaded ..
-$(window).on("load", function () {
-    $(".job-title").addClass("job-title-animation");
-});
-//////// End add animation to job ////////
-
-//////// Start Show more ////////
-$(".show-more").click(function () {
-    $(".paginations").slideToggle();
-    var $this = $(this);
-    $this.toggleClass('toggle');
-    if ($this.hasClass('toggle')) {
-        $this.text('Less projects');
-    } else {
-        $this.text('More projects');
-    }
-});
-  //////// End Show more ////////
